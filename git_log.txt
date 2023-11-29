@@ -1,0 +1,95 @@
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git init
+Initialized empty Git repository in C:/Users/parhomenko_av/Dropbox/prog/git_f/.git/
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git git commit -m "Initial commit"
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git commit -m "Initial commit"
+[main (root-commit) 5f359e6] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git remote add origin https://github.com/WhiteRA/git_f
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/WhiteRA/git_f'
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+        status
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git branch
+* main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 579 bytes | 3.00 KiB/s, done.
+From https://github.com/WhiteRA/git_f
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+
+To have this happen automatically for branches without a tracking
+
+To https://github.com/WhiteRA/git_f
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/WhiteRA/git_f'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git pull origin main
+From https://github.com/WhiteRA/git_f
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/WhiteRA/git_f'
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push origin main
+To https://github.com/WhiteRA/git_f
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/WhiteRA/git_f'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git fetch origin main
+From https://github.com/WhiteRA/git_f
+ * branch            main       -> FETCH_HEAD
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git merge origin/main
+fatal: refusing to merge unrelated histories
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git merge --allow-unrelated-histories origin/main
+Merge made by the 'ort' strategy.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git add .
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git commit -m '1'
+[main 6fac132] 1
+ 1 file changed, 1 insertion(+)
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push --set-upstream origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 747 bytes | 373.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/WhiteRA/git_f
+   1c77a11..6fac132  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git push
+Everything up-to-date
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f>
