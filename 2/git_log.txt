@@ -1,2 +1,122 @@
-# 1
-# 2
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git log
+commit a6902a80d180cdfdad102daf2f3cb1bb35ec312b (HEAD -> main, origin/main)
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Thu Dec 14 15:06:35 2023 +1000
+
+
+commit 06f4b5ece6cf515049024fce261b7a040e6993ca
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Thu Dec 14 15:06:19 2023 +1000
+
+    2
+
+commit e8ec6aaf33281a1d5327d3dab9e071768b3ffbff
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+
+    1
+
+commit 12aaed947fc74f3e3863fa8e1dbc9b5470efc24b
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Mon Dec 11 17:31:03 2023 +1000
+
+    +
+
+commit 1a14c5e19b385ba730e8ba6b0fa43d7ad095f78c
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Wed Nov 29 17:22:56 2023 +1000
+
+    git_log
+commit 6fac132e022489caa1e3c7508c5ae7deafbf93fc
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Wed Nov 29 17:15:12 2023 +1000
+
+    1
+
+commit 22e5cf6623a19922d8033e6814af4f1a48e574fb
+Merge: 5f359e6 1c77a11
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Wed Nov 29 17:14:33 2023 +1000
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 5f359e6f61acb9a111bba1ecf06ba2d8447aa1ca
+Date:   Wed Nov 29 17:07:26 2023 +1000
+
+    Initial commit
+
+commit 1c77a11874bf1717309ec9fcb9f53e2a5e30edd4
+Author: mr.White <WhiteRA_@mail.ru>
+Date:   Wed Nov 29 16:44:42 2023 +1000
+
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git show e8ec6aaf33281a1d5327d3dab9e071768b3ffbff
+commit e8ec6aaf33281a1d5327d3dab9e071768b3ffbff
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Thu Dec 14 15:05:24 2023 +1000
+
+    1
+
+new file mode 100644
+index 0000000..e69de29
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git show 1c77a11874bf1717309ec9fcb9f53e2a5e30edd4
+commit 1c77a11874bf1717309ec9fcb9f53e2a5e30edd4
+Author: mr.White <WhiteRA_@mail.ru>
+Date:   Wed Nov 29 16:44:42 2023 +1000
+
+    Initial commit
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..67dd4ae
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++# git_f
+\ No newline at end of file
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git show 12aaed947fc74f3e3863fa8e1dbc9b5470efc24b
+commit 12aaed947fc74f3e3863fa8e1dbc9b5470efc24b
+Author: Aleksandr Parhomenko <whitera_@mail.ru>
+Date:   Mon Dec 11 17:31:03 2023 +1000
+
+    +
+
+diff --git a/README.md b/1/README.md
+similarity index 100%
+rename from README.md
+rename to 1/README.md
+diff --git a/git_log.txt b/1/git_log.txt
+similarity index 100%
+rename from git_log.txt
+rename to 1/git_log.txt
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git revert 1c77a11874bf1717309ec9fcb9f53e2a5e30edd4
+CONFLICT (rename/delete): README.md renamed to 1/README.md in HEAD, but deleted in (empty tree).
+error: could not revert 1c77a11... Initial commit
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git revert 6fac132e022489caa1e3c7508c5ae7deafbf93fc
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git revert 6fac132e022489caa1e3c7508c5ae7deafbf93fc
+CONFLICT (modify/delete): 1.txt deleted in HEAD and modified in parent of 6fac132 (1).  Version parent of 6fac132 (1) of 1.txt left in tree.
+6fac132 (1) of 1.txt left in tree.
+error: could not revert 6fac132... 1
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git revert 06f4b5ece6cf515049024fce261b7a040e6993ca
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git reset --mixed HEAD^
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git restore .
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> git reset --hard HEAD~2
+HEAD is now at a6902a8 3
+PS C:\Users\parhomenko_av\Dropbox\prog\git_f> 
